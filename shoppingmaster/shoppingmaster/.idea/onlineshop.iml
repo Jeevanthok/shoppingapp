@@ -122,6 +122,6 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework:spring-test:5.2.7.RELEASE" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.xmlunit:xmlunit-core:2.7.0" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: com.oracle.database.jdbc:ojdbc8:19.3.0.0" level="project" />
-    <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.18.12" level="project" />
+    <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.18.6" level="project" />
   </component>
 </module>

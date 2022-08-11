@@ -14,7 +14,7 @@
      </ul>
      <form class="form-inline my-2 my-lg-0">
         <input type="search" (ngModelChange)="searchEmployees(key.value)" #key="ngModel" ngModel
-         name="key" id="searchName" class="form-control mr-sm-2" placeholder="Search employees..." required>
+         name="key" id="searchName" class="form-control mr-sm-2" placeholder="Search product..." required>
      </form>
   </div>
 </nav>
@@ -25,8 +25,8 @@
          <h5 style="margin-top: 10px;margin-left: 30px;" class="text-muted">Category</h5>
          <h6 style="color: rgb(48, 240, 48);margin-top: 30px;margin-left: 20px;"><b>Electronics</b></h6>
            <ul>
-             <li style="list-style: none;"><a href="#news">News</a></li>
-             <li style="list-style: none;"><a href="#contact">Contact</a></li>
+             <li style="list-style: none;"><a href="#news">Laptop</a></li>
+             <li style="list-style: none;"><a href="#contact">Mobile</a></li>
            </ul>
          
          <a style="margin-top: 30px;margin-left: 20px;" href="#about">Clothing</a>
@@ -57,40 +57,7 @@
            </tr>
          </tbody>
        </table>
-      <!-- <div *ngFor="let employee of employees">
-         <div class="card m-b-30">
-            <div class="card-body row">
-               <div class="col-md-6 how-img">
-                  <img src="{{employee?.imageUrl}}" alt="" class="img-fluid">
-                  <img src="https://images.unsplash.com/photo-1618424181497-157f25b6ddd5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bGFwdG9wJTIwY29tcHV0ZXJ8ZW58MHx8MHx8&w=1000&q=80" class="img-fluid"  alt=""/>
-              </div>
-              <div class="col-md-6">
-                  <h4>Find</h4>
-                     <h4 class="subheading">GetLance is and to s.</h4>
-                 <p class="text-muted">Freedom to work on ideal projects.nvitations.Wide variety and high pay.</p>
-                 <button type="button" class="btn btn-danger" style="margin-left:10px;">BUY NOW</button>
-                  <button type="button" class="btn btn-light" style="margin-left:10px;">ADD TO CART</button>
-              </div>
-               <div class="col-6">
-                  <a href=""><img src="{{employee?.imageUrl}}" alt="" class="img-fluid rounded-circle w-65"></a>
-               </div>
-               <div class="col-6 card-title align-self-center mb-0 mt-0">
-                  <h5>{{employee?.name}}</h5>
-                  <p class="m-0">{{employee?.jobTitle}}</p>
-               </div>
-            </div>
-            <ul class="list-group list-group-flush">
-               <li class="list-group-item"><i class="fa fa-envelope float-left"></i>{{employee?.email}}</li>
-               <li class="list-group-item"><i class="fa fa-phone float-left"></i>Phone : {{employee?.phone}}</li>
-            </ul>
-            <div class="card-body">
-               <div class="float-right btn-group btn-group-sm">
-                  <a (click)="onOpenModal(employee, 'edit')" class="btn btn-primary tooltips" data-placement="top" data-original-title="Edit"><i class="fa fa-pencil"></i> </a>
-                  <a (click)="onOpenModal(employee, 'delete')" class="btn btn-secondary tooltips" data-placement="top" data-original-title="Delete"><i class="fa fa-times"></i></a>
-               </div>
-            </div>
-         </div>
-      </div> -->
+
    </div>
  
 </div>

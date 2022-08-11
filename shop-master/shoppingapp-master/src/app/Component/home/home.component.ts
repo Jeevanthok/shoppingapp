@@ -16,11 +16,11 @@ export class HomeComponent implements OnInit {
   constructor(private employeeService: EmployeeService) { }
 
   ngOnInit(): void {
-    this.getEmployees();
+    this.getProducts();
   }
 
-  public getEmployees(): void {
-    this.employeeService.getEmployees().subscribe(
+  public getProducts(): void {
+    this.employeeService.getProducts().subscribe(
       (response: Employee[]) => {
         this.employees = response;
         console.log(this.employees);
@@ -36,7 +36,7 @@ export class HomeComponent implements OnInit {
     this.employeeService.addEmployee(addForm.value).subscribe(
       (response: Employee) => {
         console.log(response);
-        this.getEmployees();
+        this.getProducts();
         addForm.reset();
       },
       (error: HttpErrorResponse) => {
@@ -50,7 +50,7 @@ export class HomeComponent implements OnInit {
     this.employeeService.updateEmployee(employee).subscribe(
       (response: Employee) => {
         console.log(response);
-        this.getEmployees();
+        this.getProducts();
       },
       (error: HttpErrorResponse) => {
         alert(error.message);
@@ -62,7 +62,7 @@ export class HomeComponent implements OnInit {
     this.employeeService.deleteEmployee(employeeId).subscribe(
       (response: void) => {
         console.log(response);
-        this.getEmployees();
+        this.getProducts();
       },
       (error: HttpErrorResponse) => {
         alert(error.message);
@@ -70,20 +70,17 @@ export class HomeComponent implements OnInit {
     );
   }
 
-  public searchEmployees(key: string): void {
+  public searchProducts(key: string): void {
     console.log(key);
     const results: Employee[] = [];
     for (const employee of this.employees) {
-      if (employee.name.toLowerCase().indexOf(key.toLowerCase()) !== -1
-      || employee.email.toLowerCase().indexOf(key.toLowerCase()) !== -1
-      || employee.phone.toLowerCase().indexOf(key.toLowerCase()) !== -1
-      || employee.jobTitle.toLowerCase().indexOf(key.toLowerCase()) !== -1) {
+      if (employee.productname.toLowerCase().indexOf(key.toLowerCase()) !== -1) {
         results.push(employee);
       }
     }
     this.employees = results;
     if (results.length === 0 || !key) {
-      this.getEmployees();
+      this.getProducts();
     }
   }
 
